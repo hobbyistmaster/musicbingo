@@ -1,0 +1,17 @@
+/* Global styles */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: #00F5A0;
+}
+
+* {
+  box-sizing: border-box;
+}
