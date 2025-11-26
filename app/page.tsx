@@ -1,24 +1,32 @@
 export default function HomePage() {
   return (
-    <div style={{ padding: 40, fontSize: 24 }}>
-      <h1>🎵 Music Bingo</h1>
-      <p>Homepage is working!</p>
+    <div className="text-center p-10 text-white">
+      <h1 className="text-4xl font-bold mb-4">Music Bingo</h1>
 
-      <a
-        href="/host"
-        style={{
-          display: "inline-block",
-          marginTop: 20,
-          padding: "12px 20px",
-          background: "#00F5A0",
-          color: "black",
-          borderRadius: 8,
-          fontWeight: "bold",
-          textDecoration: "none"
-        }}
-      >
-        Host Login
-      </a>
+      <p className="text-xl mb-8">Welcome! Choose an option below:</p>
+
+      <div className="flex flex-col gap-4 max-w-sm mx-auto">
+        <a
+          href="/setup"
+          className="py-3 rounded bg-blue-500 text-black font-bold"
+        >
+          🎵 Create a New Game
+        </a>
+
+        <a
+          href="/host"
+          className="py-3 rounded bg-green-500 text-black font-bold"
+        >
+          🖥 Host Login
+        </a>
+
+        <a
+          href="/play"
+          className="py-3 rounded bg-yellow-500 text-black font-bold"
+        >
+          🎫 Join a Game
+        </a>
+      </div>
     </div>
   );
 }
