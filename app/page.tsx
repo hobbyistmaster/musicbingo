@@ -1,32 +1,61 @@
+"use client";
+
 export default function HomePage() {
   return (
-    <div className="text-center p-10 text-white">
-      <h1 className="text-4xl font-bold mb-4">Music Bingo</h1>
+    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-10">
+      
+      {/* Title */}
+      <h1 className="text-5xl font-extrabold mb-4 text-quartersNeon drop-shadow-[0_0_10px_#c084fc]">
+        🎵 Music Bingo
+      </h1>
 
-      <p className="text-xl mb-8">Welcome! Choose an option below:</p>
+      {/* Subtitle */}
+      <p className="text-lg text-amber-200/80 mb-10 text-center max-w-xl">
+        Fast • Fun • Interactive music bingo for your bar, venue, or party.
+        Pick a mode below to get started!
+      </p>
 
-      <div className="flex flex-col gap-4 max-w-sm mx-auto">
+      {/* Button Grid */}
+      <div className="grid grid-cols-1 gap-5 w-full max-w-sm">
+        
         <a
           href="/setup"
-          className="py-3 rounded bg-blue-500 text-black font-bold"
+          className="
+            bg-purple-500 hover:bg-purple-400 
+            text-black font-bold py-4 rounded-xl text-center 
+            shadow-lg shadow-purple-500/40 transition-transform active:scale-95
+          "
         >
-          🎵 Create a New Game
+          🎵 Create New Game
         </a>
 
         <a
           href="/host"
-          className="py-3 rounded bg-green-500 text-black font-bold"
+          className="
+            bg-green-400 hover:bg-green-300 
+            text-black font-bold py-4 rounded-xl text-center 
+            shadow-lg shadow-green-400/40 transition-transform active:scale-95
+          "
         >
           🖥 Host Login
         </a>
 
         <a
           href="/play"
-          className="py-3 rounded bg-yellow-500 text-black font-bold"
+          className="
+            bg-yellow-300 hover:bg-yellow-200 
+            text-black font-bold py-4 rounded-xl text-center 
+            shadow-lg shadow-yellow-300/40 transition-transform active:scale-95
+          "
         >
-          🎫 Join a Game
+          🎫 Join Game
         </a>
       </div>
+
+      {/* Footer */}
+      <p className="mt-14 text-xs text-neutral-500">
+        © {new Date().getFullYear()} Music Bingo • Powered by Quarters
+      </p>
     </div>
   );
 }
